@@ -1,0 +1,394 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>all commands after pipe - return command not found / Newbie Corner / Arch Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/ArchLinux.css" />
+<link rel="canonical" href="viewtopic.php?id=303394" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=303394&amp;type=atom" title="Atom topic feed" />
+    <link rel="stylesheet" media="screen" href="style/ArchLinux/arch.css?v=5"/>
+        <link rel="stylesheet" media="screen" href="style/ArchLinux/archnavbar.css?v=5"/>
+    
+<link rel="shortcut icon" href="style/ArchLinux/favicon.ico" />
+</head>
+
+<body>
+<div id="archnavbar" class="anb-forum">
+	<div id="archnavbarlogo"><h1><a href="http://archlinux.org/">Arch Linux</a></h1></div>
+	<div id="archnavbarmenu">
+		<ul id="archnavbarlist">
+			<li id="anb-home"><a href="http://archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://archlinux.org/packages/">Packages</a></li><li id="anb-forums" class="anb-selected"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux">GitLab</a></li><li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://archlinux.org/download/">Download</a></li>		</ul>
+	</div>
+</div>
+
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=303394">all commands after pipe - return command not found</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p2226249" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=2226249#p2226249">2025-02-13 13:51:46</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>timpie</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2025-02-09</span></dd>
+						<dd><span>Posts: 4</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>Hello there,</p><p>I feel kinda strange, after 20 years of unix/linux experience i finally cannot grasp this problem and need to <br />post a newbies question :-) Oh well, we can always learn smething new <br />Running latest Arch Linux, bash, and everytime i run a command piping the output to another command<br />results in command not found .. <br />What is happening? </p><p>tim@jarabi:~$ cat /etc/passwd | grep tim<br />bash:  grep: command not found<br />tim@jarabi:~$ which grep<br />/usr/bin/grep<br />tim@jarabi:~$ sudo dmesg -T | less<br />bash:  less: command not found<br />tim@jarabi:~$ which more<br />/usr/bin/less<br />tim@jarabi:~$ sudo lsblk | more<br />bash:  more: command not found<br />tim@jarabi:~$ which more<br />/usr/bin/more</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226252" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=2226252#p2226252">2025-02-13 14:18:28</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>mithrial</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2017-03-05</span></dd>
+						<dd><span>Posts: 62</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>There is a weird whitespace after the pipe symbol which resolves the command afterwards to </p><div class="codebox"><pre><code>␣grep</code></pre></div><p>Can you test another keyboard?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226723" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=2226723#p2226723">Yesterday 11:27:10</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>timpie</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2025-02-09</span></dd>
+						<dd><span>Posts: 4</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>mithrial wrote:</cite><blockquote><div><p>There is a weird whitespace after the pipe symbol which resolves the command afterwards to </p><div class="codebox"><pre><code>␣grep</code></pre></div><p>Can you test another keyboard?</p></div></blockquote></div><p>Did that, Same problem</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226764" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=2226764#p2226764">Yesterday 15:36:24</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>What happens if you use the absolute path:</p><div class="codebox"><pre><code>ls -R ~/videos | /usr/bin/grep porn # and inb4 anyone complains to not grep ls, I haven&#039;t made a porn reference in like a month, so shut up</code></pre></div>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226766" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=2226766#p2226766">Yesterday 15:56:57</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>loqs</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2014-03-06</span></dd>
+						<dd><span>Posts: 18,277</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>As a work around you can remove the spaces and still use pipe in many cases such as:</p><div class="codebox"><pre><code>$ cat /etc/passwd|grep tim
+# dmesg -T|less</code></pre></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226767" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=2226767#p2226767">Yesterday 16:08:35</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>I don&#039;t even see that &quot;weird whitespace&quot; and copypasting the post into hexdump -C just shows 0x20 either.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226802" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=2226802#p2226802">Yesterday 19:14:47</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Trilby</strong></dt>
+						<dd class="usertitle"><strong>Inspector Parrot</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/54694.png?m=1662601350" width="53" height="80" alt="" /></dd>
+						<dd><span>Registered: 2011-11-29</span></dd>
+						<dd><span>Posts: 30,331</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://code.jessemcclure.org" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p>The space is in the error message from bash.&#160; The OP gave an *attempt* at diagnostics with &quot;which more&quot;, but whiches should be burned at the stake.&#160; A relevant diagnostic would be &quot;type more&quot; - I&#039;d wager this will show that it is an alias.&#160; And I&#039;d further wager that the OP has a set of alias&#039;s that add whitespace for common commands (probably something to do with using with sudo, but I&#039;ve not used that tool in a long time).&#160; And finally I&#039;d wager they copy-pasta&#039;d these aliases from a website into a shell config file.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><span style="color: #888888">&quot;UNIX is simple and coherent&quot; - Dennis Ritchie; &quot;GNU&#039;s Not Unix&quot; - Richard Stallman<br /></span></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226816" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=2226816#p2226816">Yesterday 21:02:36</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: all commands after pipe - return command not found</h3>
+					<div class="postmsg">
+						<p><img src="https://bbs.archlinux.org/img/smilies/smile.png" width="15" height="15" alt="smile" /></p><p>There&#039;s indeed a second 0x20, but</p><div class="codebox"><pre><code>$ alias grep=&#039; grep&#039;
+$ which grep
+/usr/bin/grep # so which is useless
+$ type -a grep
+grep ist ein Alias von » grep«.
+grep ist /usr/bin/grep
+grep ist /sbin/grep
+grep ist /usr/sbin/grep
+# but
+$ echo foo | grep foo
+foo # bash seems unimpressed</code></pre></div><p>Because of the pipe my money would have been on the subshell screwing $PATH - we&#039;ll see.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=303394">all commands after pipe - return command not found</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Technical Issues and Assistance">
+							<option value="23" selected="selected">Newbie Corner</option>
+							<option value="17">Installation</option>
+							<option value="22">Kernel &amp; Hardware</option>
+							<option value="18">Applications &amp; Desktop Environments</option>
+							<option value="31">Laptop Issues</option>
+							<option value="8">Networking, Server, and Protection</option>
+							<option value="32">Multimedia and Games</option>
+							<option value="51">Arch Linux Guided Installer</option>
+							<option value="50">System Administration</option>
+							<option value="35">Other Architectures</option>
+						</optgroup>
+						<optgroup label="Arch-centric">
+							<option value="24">Announcements, Package &amp; Security Advisories</option>
+							<option value="1">Arch Discussion</option>
+							<option value="13">Forum &amp; Wiki discussion</option>
+						</optgroup>
+						<optgroup label="Pacman Upgrades, Packaging &amp; AUR">
+							<option value="44">Pacman &amp; Package Upgrade Issues</option>
+							<option value="49">[testing] Repo Forum</option>
+							<option value="4">Creating &amp; Modifying Packages</option>
+							<option value="38">AUR Issues, Discussion &amp; PKGBUILD Requests</option>
+						</optgroup>
+						<optgroup label="Contributions &amp; Discussion">
+							<option value="20">GNU/Linux Discussion</option>
+							<option value="27">Community Contributions</option>
+							<option value="33">Programming &amp; Scripting</option>
+							<option value="30">Other Languages</option>
+							<option value="47">Artwork and Screenshots</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=303394&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

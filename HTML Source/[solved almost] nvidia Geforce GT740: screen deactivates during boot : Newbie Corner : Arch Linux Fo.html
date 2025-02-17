@@ -1,0 +1,917 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>[solved almost] nvidia Geforce GT740: screen deactivates during boot / Newbie Corner / Arch Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/ArchLinux.css" />
+<link rel="canonical" href="viewtopic.php?id=302904" title="Page 1" />
+<link rel="next" href="viewtopic.php?id=302904&amp;p=2" title="Page 2" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=302904&amp;type=atom" title="Atom topic feed" />
+    <link rel="stylesheet" media="screen" href="style/ArchLinux/arch.css?v=5"/>
+        <link rel="stylesheet" media="screen" href="style/ArchLinux/archnavbar.css?v=5"/>
+    
+<link rel="shortcut icon" href="style/ArchLinux/favicon.ico" />
+</head>
+
+<body>
+<div id="archnavbar" class="anb-forum">
+	<div id="archnavbarlogo"><h1><a href="http://archlinux.org/">Arch Linux</a></h1></div>
+	<div id="archnavbarmenu">
+		<ul id="archnavbarlist">
+			<li id="anb-home"><a href="http://archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://archlinux.org/packages/">Packages</a></li><li id="anb-forums" class="anb-selected"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux">GitLab</a></li><li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://archlinux.org/download/">Download</a></li>		</ul>
+	</div>
+</div>
+
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=302904">[solved almost] nvidia Geforce GT740: screen deactivates during boot</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong> <a href="viewtopic.php?id=302904&amp;p=2">2</a> <a href="viewtopic.php?id=302904&amp;p=3">3</a> <a rel="next" href="viewtopic.php?id=302904&amp;p=2">Next</a></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p2222647" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=2222647#p2222647">2025-01-26 20:38:13</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>[solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>hi,</p><div class="codebox"><pre><code>lspci | grep -i vga
+01:00.0 VGA compatible controller: NVIDIA Corporation GK208B [GeForce GT 730] (rev a1)</code></pre></div><p>symptoms:<br />When I boot my PC on kernel 6.12 (it appeared with 6.10 (refer to <a href="https://bbs.archlinux.org/viewtopic.php?pid=2201686#p2201686" rel="nofollow">this discussion</a>) screen seems to disconnect : screen goes to sleep mode, though system works properly and is reachable through ssh.<br />System starts correctly using current LTS kernel 6.6.72-1.</p><p>boot journal:<br /><a href="http://0x0.st/8XEk.txt" rel="nofollow">http://0x0.st/8XEk.txt</a></p><p>xorg log (I login through TTY, no DM installed)<br /><a href="http://0x0.st/8XE7.1.log" rel="nofollow">http://0x0.st/8XE7.1.log</a></p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-02-15 22:15:32)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222686" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=2222686#p2222686">2025-01-26 23:15:39</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="codebox"><pre><code>janv. 26 21:18:56 archlinux kernel: nouveau 0000:01:00.0: [drm] Cannot find any crtc or sizes
+janv. 26 21:18:56 archlinux kernel: nouveau 0000:01:00.0: [drm] Cannot find any crtc or sizes
+janv. 26 21:18:57 archlinux kernel: nouveau 0000:01:00.0: [drm] Cannot find any crtc or sizes
+---
+[   349.748] (WW) modeset(0): No outputs definitely connected, trying again...</code></pre></div><p><a href="https://bbs.archlinux.org/viewtopic.php?pid=2221121#p2221121" rel="nofollow">https://bbs.archlinux.org/viewtopic.php … 1#p2221121</a> (pleasepleasepleasepleaseplease)</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222695" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=2222695#p2222695">2025-01-27 03:29:15</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>&quot;initcall_blacklist=simpledrm_platform_driver_init&quot; didn&#039;t work.<br /><a href="http://0x0.st/8XUP.txt" rel="nofollow">journalctl -b</a><br />neither does &quot;nvidia_drm.modeset=1&quot;<br /><a href="http://0x0.st/8XUc.txt" rel="nofollow">journalctl -b</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222728" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=2222728#p2222728">2025-01-27 08:28:32</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>But… I said &quot;pleasepleasepleasepleaseplease&quot; <img src="https://bbs.archlinux.org/img/smilies/sad.png" width="15" height="15" alt="sad" /></p><p>Try to move nouveau into the initramfs (the kms hook should™ do or you explciitly add it to the modules. nb that because of the GSP firware this will likely blow up the initramfs considerably)</p><p>You can force the kernel to assume an output to be active, <a href="https://www.kernel.org/doc/Documentation/fb/modedb.rst" rel="nofollow">https://www.kernel.org/doc/Documentation/fb/modedb.rst</a></p><p>You&#039;re aware that your GPU is supported by <a href="https://aur.archlinux.org/packages/nvidia-470xx-dkms/" rel="nofollow">https://aur.archlinux.org/packages/nvidia-470xx-dkms/</a> ?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222744" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=2222744#p2222744">2025-01-27 10:20:55</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>and what does mean &quot;pleasepleasepleasepleaseplease&quot; ?</p><p>installing dkms didn&#039;t add nouveau to <strong>MODULES=()</strong> into /etc/mkinitcpio.conf<br />so I added it manually, and run <strong>mkinitcpio -p linux</strong> with no effect at reboot.</p><p>I also added <strong>video=HDMI-1:D</strong> to grub&#039;s default, in order to &quot;force the display to be enabled&quot;, and then <strong>grub-mkconfig...</strong> with no effect too.</p><p>it worked with nouveau until 6.10 kernel update, it&#039;d be fine to work now as it used to.</p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-01-27 13:54:22)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222774" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=2222774#p2222774">2025-01-27 14:37:10</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>Means I wanted to blame the simpledrm device very badly.</p><p>Assuming HDMI-1 is actually the correct output (check /sys/class/drm/card*/edid on the LTS kernel) the relevant video parameter would likely be &quot;e&quot;, ie. </p><div class="codebox"><pre><code>video=HDMI-1:e</code></pre></div><p> - though I guess D should™ work provided it&#039;s indeed a digital conneciotn.</p><p>What happens if you re-connect the output (on either the computer or monitor side) after the boot?<br />(The output will not automatically enabled in X11, but it should show up in &quot;xrandr --display :0 -q&quot;)</p><p>Do you have linux-firmware intalled?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2222793" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=2222793#p2222793">2025-01-27 16:58:58</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>&quot;:e&quot; doesn&#039;t change things.<br />dis/re-connecting cable neither.</p><p>I blindly typed and redirected &quot;xrandr --display $DISPLAY -q &quot; to a tmpFile:</p><div class="codebox"><pre><code>Screen 0: minimum 320 x 200, current 1024 x 768, maximum 16384 x 16384
+DVI-D-1 disconnected primary (normal left inverted right x axis y axis)
+HDMI-1 disconnected (normal left inverted right x axis y axis)
+VGA-1 disconnected (normal left inverted right x axis y axis)</code></pre></div><p>both linux-firmware and linux-firmware-whence are installed</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223013" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=2223013#p2223013">2025-01-28 16:31:41</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p><a href="https://wiki.archlinux.org/title/Kernel_mode_setting#Forcing_modes_and_EDID" rel="nofollow">https://wiki.archlinux.org/title/Kernel … s_and_EDID</a> but this sounds like a bug in nouveau - it&#039;d probably be good to check that it&#039;s indeed in that module (by testing the nvidia 470xx drivers)</p><p>Does the LTS kernel btw. load the usr/lib/firmware/nvidia/gk20a/ firmware?<br />(Not sure whether they really should, but they don&#039;t show up in the log you posted)</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223090" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=2223090#p2223090">2025-01-28 20:50:59</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="codebox"><pre><code># journalctl -b -n +1
+janv. 28 21:40:13 archlinux kernel: Linux version 6.6.72-1-lts (linux-lts@archlinux) (gcc (GCC) 14.2.1 20240910, GNU ld (GNU Binutils) 2.43.1) #1 SMP PREEMPT_DYNAMIC Fri, 17 Jan 2025 14:04:26 +0000</code></pre></div><div class="codebox"><pre><code># journalctl -b -g gk20a
+-- No entries --</code></pre></div><p>but</p><div class="codebox"><pre><code># journalctl -b -g gk20
+janv. 28 21:40:15 archlinux kernel: nouveau 0000:01:00.0: NVIDIA GK208B (b06070b1)</code></pre></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223098" class="blockpost roweven">
+	<h2><span><span class="conr">#10</span> <a href="viewtopic.php?pid=2223098#p2223098">2025-01-28 21:25:00</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>Can you please post a journal from the LTS kernel?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223110" class="blockpost rowodd">
+	<h2><span><span class="conr">#11</span> <a href="viewtopic.php?pid=2223110#p2223110">2025-01-28 22:14:29</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>adding edid to /usr/lib/firmware does nothing</p><div class="codebox"><pre><code>janv. 28 22:08:47 archlinux kernel: Linux version 6.12.10-arch1-1 (linux@archlinux) (gcc (GCC) 14.2.1 20240910, GNU ld (GNU Binutils) 2.43.1) #1 SMP PREEMPT_DYNAMIC Sat, 18 Jan 2025 02:26:57 +0000
+janv. 28 22:08:47 archlinux kernel: Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=29073ff0-9a95-4719-a1b8-19fbb7ce0bc7 rw drm.edid_firmware=HDMI-A-1:edid/HDMIedid.bin video=HDMI-1:e loglevel=3 resume=UUID=7bbffdae-84b2-48cd-9ca3-33fdf&gt;</code></pre></div><p>here is LTS journal : <a href="http://0x0.st/88q-.txt" rel="nofollow">http://0x0.st/88q-.txt</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223114" class="blockpost roweven">
+	<h2><span><span class="conr">#12</span> <a href="viewtopic.php?pid=2223114#p2223114">2025-01-28 22:37:20</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="codebox"><pre><code>janv. 28 23:14:57 archlinux kernel: nouveau 0000:01:00.0: Direct firmware load for edid/HDMIedid.bin failed with error -2
+janv. 28 23:14:57 archlinux kernel: nouveau 0000:01:00.0: [drm] *ERROR* [CONNECTOR:87:HDMI-A-1] Requesting EDID firmware &quot;edid/HDMIedid.bin&quot; failed (err=-2)</code></pre></div><p> the eidid isn&#039;t there at all?</p><p>The difference seems to be nouveaudrmfb, <a href="https://www.linuxquestions.org/questions/showthread.php?p=6543011#post6543011" rel="nofollow">https://www.linuxquestions.org/question … ost6543011</a> was apparently down to some adapter - do you use anything like that?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223120" class="blockpost rowodd">
+	<h2><span><span class="conr">#13</span> <a href="viewtopic.php?pid=2223120#p2223120">2025-01-28 23:23:40</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="quotebox"><blockquote><div><p>the eidid isn&#039;t there at all?</p></div></blockquote></div><p>it is. Here&#039;s what I did. :</p><div class="codebox"><pre><code># cp /sys/class/drm/card0/card0-HDMI-A-1/edid /usr/lib/firmware/HDMIedid.bin</code></pre></div><div class="codebox"><pre><code># ls /usr/lib/firmware/HDMIedid.bin
+/usr/lib/firmware/HDMIedid.bin</code></pre></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223319" class="blockpost roweven">
+	<h2><span><span class="conr">#14</span> <a href="viewtopic.php?pid=2223319#p2223319">2025-01-29 17:24:59</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>/usr/lib/firmware<strong>/edid</strong>/HDMIedid.bin</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223369" class="blockpost rowodd">
+	<h2><span><span class="conr">#15</span> <a href="viewtopic.php?pid=2223369#p2223369">2025-01-29 20:54:49</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>oops! silly me.<br />and &quot;A-&quot; was faulty too.</p><p>here is LTS &quot;journalctl -b&quot; : <a href="http://0x0.st/88Sv.txt" rel="nofollow">http://0x0.st/88Sv.txt</a><br />and 6.12&#039;s : <a href="http://0x0.st/88Sx.txt" rel="nofollow">http://0x0.st/88Sx.txt</a></p><div class="codebox"><pre><code>janv. 29 21:48:[...] simple-framebuffer.0: [drm] Registered 1 planes with drm panic</code></pre></div><p>?</p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-01-29 22:03:59)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223383" class="blockpost roweven">
+	<h2><span><span class="conr">#16</span> <a href="viewtopic.php?pid=2223383#p2223383">2025-01-29 22:07:41</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>so. I installed nvidia-470xxx-dkms. It works with 6.12<br />but fonts in TTY are bigger and a bit blurred.<br />I guess X display won&#039;t be as it should be when using nouveau only.</p><p>here is 6.12 boot journal: <a href="http://0x0.st/88QV.txt" rel="nofollow">http://0x0.st/88QV.txt</a></p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-01-29 22:08:07)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223499" class="blockpost rowodd">
+	<h2><span><span class="conr">#17</span> <a href="viewtopic.php?pid=2223499#p2223499">2025-01-30 15:03:23</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="codebox"><pre><code>janv. 29 23:01:47 OptiPlex7010 kernel: [drm] [nvidia-drm] [GPU ID 0x00000100] Loading driver
+janv. 29 23:01:47 OptiPlex7010 kernel: [drm] Initialized nvidia-drm 0.0.0 for 0000:01:00.0 on minor 1
+janv. 29 23:01:47 OptiPlex7010 kernel: Failed to initialize the nv-hotplug-helper DRM client (ensure DRM kernel mode setting is enabled via nvidia-drm.modeset=1).
+janv. 29 23:01:47 OptiPlex7010 kernel: [drm] [nvidia-drm] [GPU ID 0x00000100] Unloading driver</code></pre></div><p>Add &quot;nvidia-drm.modeset=1&quot; to the kernel parameters to block the simpledrm device (regardless of the used driver) and please post the Xorg log of a run w/ nvidia-470xx</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223522" class="blockpost roweven">
+	<h2><span><span class="conr">#18</span> <a href="viewtopic.php?pid=2223522#p2223522">2025-01-30 18:02:30</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>let&#039;s say X11 is nice now, TTYs are still &quot;ugly&quot;.<br />I&#039;ve got to find another smaller font than ter-112n (ter-110n doesn&#039;t exist <img src="https://bbs.archlinux.org/img/smilies/smile.png" width="15" height="15" alt="smile" /> ), I guess.</p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-01-30 23:13:26)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223599" class="blockpost rowodd">
+	<h2><span><span class="conr">#19</span> <a href="viewtopic.php?pid=2223599#p2223599">2025-01-31 02:33:11</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>would <a href="https://github.com/korvahannu/arch-nvidia-drivers-installation-guide#add-early-loading-of-nvidia-modules" rel="nofollow">add early loading of NVIDIA modules</a> help having back nice TTYs ?</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223621" class="blockpost roweven">
+	<h2><span><span class="conr">#20</span> <a href="viewtopic.php?pid=2223621#p2223621">2025-01-31 08:30:45</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>If modesetting works it will activate that earlier, but with the cited journal in #17 you don&#039;t have KMS at all.<br />Is that still there?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223681" class="blockpost rowodd">
+	<h2><span><span class="conr">#21</span> <a href="viewtopic.php?pid=2223681#p2223681">2025-01-31 13:35:58</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>it seems ok now :</p><div class="codebox"><pre><code># journalctl -b -n+1
+janv. 31 14:18:35 archlinux kernel: Linux version 6.12.10-arch1-1 (linux@archlinux) (gcc (GCC) 14.2.1 20240910, GNU ld (GNU Binutils) 2.43.1) #1 SMP PREEMPT_DYNAMIC Sat, 18 Jan 2025 02:26:57 +0000</code></pre></div><div class="codebox"><pre><code># journalctl -b -g Failed
+janv. 31 14:19:04 OptiPlex7010 network[481]: Failed to set DNS configuration: Could not activate remote peer &#039;org.freedesktop.resolve1&#039;: activation request failed: unknown unit</code></pre></div><p><a href="http://0x0.st/88gD.txt" rel="nofollow">complete journal</a></p><p>but still</p><div class="codebox"><pre><code>echo $LINES x $COLUMNS
+64 x 170</code></pre></div><p>when I usually have &quot;90 x 320&quot;</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223698" class="blockpost roweven">
+	<h2><span><span class="conr">#22</span> <a href="viewtopic.php?pid=2223698#p2223698">2025-01-31 15:41:37</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>Does &quot;video=1920x1080&quot; or whatever the native resolution is help with that?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2223722" class="blockpost rowodd">
+	<h2><span><span class="conr">#23</span> <a href="viewtopic.php?pid=2223722#p2223722">2025-01-31 16:42:51</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<div class="codebox"><pre><code>janv. 31 17:40:[...]bc7 rw nvidia-drm.modeset=1 video=1920x1080 loglevel=3 resume=UUID=7bbffdae-84b2-48cd-9ca3-33fdfe07eb2b</code></pre></div><p>has no effect.<br />I&#039;ve tried &quot;video=HDMI-1:1920x1080@60&quot; with no effect either.</p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-01-31 16:43:52)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2224559" class="blockpost roweven">
+	<h2><span><span class="conr">#24</span> <a href="viewtopic.php?pid=2224559#p2224559">2025-02-04 15:25:41</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>sukolyn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2024-02-14</span></dd>
+						<dd><span>Posts: 154</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p>I also looked at grub&#039;s videoinfo, but it shows no available mode.</p><p>edit: how to match psf fonts using pacman ? none of those installed fit my need.</p>
+						<p class="postedit"><em>Last edited by sukolyn (2025-02-04 15:48:26)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2224598" class="blockpost rowodd">
+	<h2><span><span class="conr">#25</span> <a href="viewtopic.php?pid=2224598#p2224598">2025-02-04 17:26:12</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>seth</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63451.png?m=1731233562" width="80" height="80" alt="" /></dd>
+						<dd><span>Registered: 2012-09-03</span></dd>
+						<dd><span>Posts: 61,054</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [solved almost] nvidia Geforce GT740: screen deactivates during boot</h3>
+					<div class="postmsg">
+						<p><a href="https://archlinux.org/packages/extra/any/terminus-font/" rel="nofollow">https://archlinux.org/packages/extra/any/terminus-font/</a> ships some psf fonts.<br />What&#039;s the output of &quot;fbset -i&quot; (on the console, this will likely not work or be relevant on X11 or wayland)?</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><a href="http://wiki.archlinux.org/title/List_of_applications/Internet#Without_a_dedicated_client" rel="nofollow">How to upload text</a> · <a href="http://wiki.archlinux.org/title/Systemd#Change_default_target_to_boot_into" rel="nofollow">How to boot w/o GUI</a> · <a href="http://wiki.archlinux.org/title/Dual_boot_with_Windows#Fast_Startup_and_hibernation" rel="nofollow">Disable Windows Fast-Start!</a> · <a href="http://wiki.archlinux.org/title/Xinit#xinitrc" rel="nofollow">Fix your xinitrc</a></p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong> <a href="viewtopic.php?id=302904&amp;p=2">2</a> <a href="viewtopic.php?id=302904&amp;p=3">3</a> <a rel="next" href="viewtopic.php?id=302904&amp;p=2">Next</a></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=302904">[solved almost] nvidia Geforce GT740: screen deactivates during boot</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Technical Issues and Assistance">
+							<option value="23" selected="selected">Newbie Corner</option>
+							<option value="17">Installation</option>
+							<option value="22">Kernel &amp; Hardware</option>
+							<option value="18">Applications &amp; Desktop Environments</option>
+							<option value="31">Laptop Issues</option>
+							<option value="8">Networking, Server, and Protection</option>
+							<option value="32">Multimedia and Games</option>
+							<option value="51">Arch Linux Guided Installer</option>
+							<option value="50">System Administration</option>
+							<option value="35">Other Architectures</option>
+						</optgroup>
+						<optgroup label="Arch-centric">
+							<option value="24">Announcements, Package &amp; Security Advisories</option>
+							<option value="1">Arch Discussion</option>
+							<option value="13">Forum &amp; Wiki discussion</option>
+						</optgroup>
+						<optgroup label="Pacman Upgrades, Packaging &amp; AUR">
+							<option value="44">Pacman &amp; Package Upgrade Issues</option>
+							<option value="49">[testing] Repo Forum</option>
+							<option value="4">Creating &amp; Modifying Packages</option>
+							<option value="38">AUR Issues, Discussion &amp; PKGBUILD Requests</option>
+						</optgroup>
+						<optgroup label="Contributions &amp; Discussion">
+							<option value="20">GNU/Linux Discussion</option>
+							<option value="27">Community Contributions</option>
+							<option value="33">Programming &amp; Scripting</option>
+							<option value="30">Other Languages</option>
+							<option value="47">Artwork and Screenshots</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=302904&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>

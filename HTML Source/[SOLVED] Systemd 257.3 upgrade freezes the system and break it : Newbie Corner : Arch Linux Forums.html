@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>[SOLVED] Systemd 257.3 upgrade freezes the system and break it / Newbie Corner / Arch Linux Forums</title>
+<link rel="stylesheet" type="text/css" href="style/ArchLinux.css" />
+<link rel="canonical" href="viewtopic.php?id=303424" title="Page 1" />
+<link rel="alternate" type="application/atom+xml" href="extern.php?action=feed&amp;tid=303424&amp;type=atom" title="Atom topic feed" />
+    <link rel="stylesheet" media="screen" href="style/ArchLinux/arch.css?v=5"/>
+        <link rel="stylesheet" media="screen" href="style/ArchLinux/archnavbar.css?v=5"/>
+    
+<link rel="shortcut icon" href="style/ArchLinux/favicon.ico" />
+</head>
+
+<body>
+<div id="archnavbar" class="anb-forum">
+	<div id="archnavbarlogo"><h1><a href="http://archlinux.org/">Arch Linux</a></h1></div>
+	<div id="archnavbarmenu">
+		<ul id="archnavbarlist">
+			<li id="anb-home"><a href="http://archlinux.org/">Home</a></li><li id="anb-packages"><a href="http://archlinux.org/packages/">Packages</a></li><li id="anb-forums" class="anb-selected"><a href="https://bbs.archlinux.org/">Forums</a></li><li id="anb-wiki"><a href="https://wiki.archlinux.org/">Wiki</a></li><li id="anb-gitlab"><a href="https://gitlab.archlinux.org/archlinux">GitLab</a></li><li id="anb-security"><a href="https://security.archlinux.org/">Security</a></li><li id="anb-aur"><a href="https://aur.archlinux.org/">AUR</a></li><li id="anb-download"><a href="http://archlinux.org/download/">Download</a></li>		</ul>
+	</div>
+</div>
+
+
+<div id="punviewtopic" class="pun">
+<div class="top-box"></div>
+<div class="punwrap">
+
+<div id="brdheader" class="block">
+	<div class="box">
+		<div id="brdmenu" class="inbox">
+			<ul>
+				<li id="navindex" class="isactive"><a href="index.php">Index</a></li>
+				<li id="navrules"><a href="misc.php?action=rules">Rules</a></li>
+				<li id="navsearch"><a href="search.php">Search</a></li>
+				<li id="navregister"><a href="register.php">Register</a></li>
+				<li id="navlogin"><a href="login.php">Login</a></li>
+			</ul>
+		</div>
+		<div id="brdwelcome" class="inbox">
+			<p class="conl">You are not logged in.</p>
+			<ul class="conr">
+				<li><span>Topics: <a href="search.php?action=show_recent" title="Find topics with recent posts.">Active</a> | <a href="search.php?action=show_unanswered" title="Find topics with no replies.">Unanswered</a></span></li>
+			</ul>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<div id="brdmain">
+<div class="linkst">
+	<div class="inbox crumbsplus">
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=303424">[SOLVED] Systemd 257.3 upgrade freezes the system and break it</a></strong></li>
+		</ul>
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<div class="clearer"></div>
+	</div>
+</div>
+
+<div id="p2226433" class="blockpost rowodd firstpost blockpost1">
+	<h2><span><span class="conr">#1</span> <a href="viewtopic.php?pid=2226433#p2226433">2025-02-14 19:15:09</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>brauliobo</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2008-07-29</span></dd>
+						<dd><span>Posts: 21</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>[SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Units starts to fail (seeing with `systemctl status --failed`), mostly the systemd ones.</p><p>Crtl + Alt + Del will work to make the system reboot.</p><p>Then in boot it fail on many essential units and won&#039;t mount devices too.</p><p>Reverting back to 257.2 fixes it.</p>
+						<p class="postedit"><em>Last edited by brauliobo (Yesterday 14:19:38)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226434" class="blockpost roweven">
+	<h2><span><span class="conr">#2</span> <a href="viewtopic.php?pid=2226434#p2226434">2025-02-14 19:22:32</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>WorMzy</strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/38091.jpg?m=1572193439" width="80" height="80" alt="" /></dd>
+						<dd><span>From: Scotland</span></dd>
+						<dd><span>Registered: 2010-06-16</span></dd>
+						<dd><span>Posts: 12,595</span></dd>
+						<dd class="usercontacts"><span class="website"><a href="https://wormzy.com" rel="nofollow">Website</a></span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Cannot reproduce. Please post the journal from an affected session.</p><p>Mod note: Moving to NC.</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p><strong>Sakura:-</strong><br />Mobo: MSI MAG X570S TORPEDO MAX // Processor: AMD Ryzen 9 5950X @4.9GHz // GFX: AMD Radeon RX 5700 XT // RAM: 32GB (4x 8GB) Corsair DDR4 (@ 3000MHz) // Storage: 1x 3TB HDD, 6x 1TB SSD, 2x 120GB SSD, 1x 275GB M2 SSD</p><p>Making lemonade from lemons since 2015.</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226461" class="blockpost rowodd">
+	<h2><span><span class="conr">#3</span> <a href="viewtopic.php?pid=2226461#p2226461">2025-02-14 21:55:43</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>jupjohn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2025-02-14</span></dd>
+						<dd><span>Posts: 3</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>I&#039;ve just run into the same issue going from 257.2 to 257.3. </p><p>There are no new journals after the new version was installed; the last bits I see are `systemd 257.3-1-arch running in system mode, some polkit spam, and the last line is `Queuing reload/restart jobs for marked units…`.</p><p>Systemd was beyond screwed to the point of not being able to enter a rescue OR emergency shell. Almost every service was failing to start.</p><p>Happy to provide whatever to debug this as I can reproduce.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226489" class="blockpost roweven">
+	<h2><span><span class="conr">#4</span> <a href="viewtopic.php?pid=2226489#p2226489">2025-02-15 01:51:15</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>brauliobo</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2008-07-29</span></dd>
+						<dd><span>Posts: 21</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>@wormzy as @jupjohn mentioned, no journal logs are available immediately after the upgrade and in the boot not even `single` option works.</p><p>I have 2 other PCs and the upgrade worked there, so the issue has some specific trigger</p>
+						<p class="postedit"><em>Last edited by brauliobo (2025-02-15 01:51:46)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226490" class="blockpost rowodd">
+	<h2><span><span class="conr">#5</span> <a href="viewtopic.php?pid=2226490#p2226490">2025-02-15 01:54:35</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>piperfw</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2021-01-08</span></dd>
+						<dd><span>Posts: 30</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>I also have encountered this issue with going to 257.3-1, services stopped working and system wouldn&#039;t boot after a restart.</p><p>Pastebin for my journal from upgrade until I rebooted, in case helpful: <a href="https://pastebin.com/LcBHhpJJ" rel="nofollow">https://pastebin.com/LcBHhpJJ</a> (note I upgraded using an ansible community script).</p><p>On latest 6.13.2-arch1-1</p><p>My original report of the issue including image of errors on boot and systemd packages I had to downgrade: <a href="https://bbs.archlinux.org/viewtopic.php?id=303429" rel="nofollow">https://bbs.archlinux.org/viewtopic.php?id=303429</a></p>
+						<p class="postedit"><em>Last edited by piperfw (2025-02-15 12:26:33)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226660" class="blockpost roweven">
+	<h2><span><span class="conr">#6</span> <a href="viewtopic.php?pid=2226660#p2226660">Yesterday 02:02:06</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>jupjohn</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2025-02-14</span></dd>
+						<dd><span>Posts: 3</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Hey @brauliobo &amp; @piperfw,</p><p>Could you guys attach as much information (what you&#039;ve shared here &amp; anything else you have) in the corresponding bug ticket here: <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/systemd/-/issues/41" rel="nofollow">https://gitlab.archlinux.org/archlinux/ … /issues/41</a><br />Trying to put it all in once place so we&#039;ve got something to work with.</p><p>Cheers.</p><p>EDIT: if you don&#039;t have an account and want me to be the messenger, dump your comment in here and ask me to forward it on.</p>
+						<p class="postedit"><em>Last edited by jupjohn (Yesterday 02:03:29)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226699" class="blockpost rowodd">
+	<h2><span><span class="conr">#7</span> <a href="viewtopic.php?pid=2226699#p2226699">Yesterday 10:17:47</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>NoSavvy</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>From: Dorchester, Dorset, UK</span></dd>
+						<dd><span>Registered: 2013-01-23</span></dd>
+						<dd><span>Posts: 123</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Updated an Arch derivative including systemd and the same problem occured, loads of system files failed to load make system unusable. On inspection some files had disappeared altogether. I simply&#160; reinstalled as it had been on the PC for a few years. I&#039;ve just updated Arch itself and no problems at all. (Same PC)</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226737" class="blockpost roweven">
+	<h2><span><span class="conr">#8</span> <a href="viewtopic.php?pid=2226737#p2226737">Yesterday 12:28:53</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Lone_Wolf</strong></dt>
+						<dd class="usertitle"><strong>Administrator</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/4504.jpg?m=1572193439" width="61" height="79" alt="" /></dd>
+						<dd><span>From: Netherlands, Europe</span></dd>
+						<dd><span>Registered: 2005-10-04</span></dd>
+						<dd><span>Posts: 13,301</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Do all with this problem use glibc-eac-bin ?</p><p>If so, that package replaces the glibc system library which is a Very Bad Idea and can cause all kind of issues.</p><p>boot to a live environment , install repo glibc and reboot .</p>
+					</div>
+					<div class="postsignature postmsg"><hr /><p>Disliking systemd intensely, but not satisfied with alternatives so focusing on taming systemd.</p><p><a href="https://wiki.archlinux.org/title/DeveloperWiki:Building_in_a_clean_chroot" rel="nofollow">clean chroot building</a> not flexible enough ?<br /> Try <a href="https://github.com/graysky2/clean-chroot-manager" rel="nofollow">clean chroot manager</a> by graysky</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226750" class="blockpost rowodd">
+	<h2><span><span class="conr">#9</span> <a href="viewtopic.php?pid=2226750#p2226750">Yesterday 14:18:01</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>brauliobo</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2008-07-29</span></dd>
+						<dd><span>Posts: 21</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>Mistery solved. I&#039;ve put glibc in the `IgnorePkg` section of `pacman.conf`, as glibc 2.41 is breaking a cuda program compilation.</p><p>By removing it from IgnorePkg and upgrading it first, systemd upgrade will work.</p><p>systemd 257.3 package must depend on glibc &gt;= 2.41</p>
+						<p class="postedit"><em>Last edited by brauliobo (Yesterday 14:24:06)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226751" class="blockpost roweven">
+	<h2><span><span class="conr">#10</span> <a href="viewtopic.php?pid=2226751#p2226751">Yesterday 14:18:56</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>brauliobo</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2008-07-29</span></dd>
+						<dd><span>Posts: 21</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>@jupjohn I can&#039;t login into Arch&#039;s gitlab, please comment there</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226752" class="blockpost rowodd">
+	<h2><span><span class="conr">#11</span> <a href="viewtopic.php?pid=2226752#p2226752">Yesterday 14:28:53</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>Scimmia</strong></dt>
+						<dd class="usertitle"><strong>Fellow</strong></dd>
+						<dd class="postavatar"><img src="https://bbs.archlinux.org/img/avatars/63385.png?m=1572193435" width="80" height="62" alt="" /></dd>
+						<dd><span>Registered: 2012-09-01</span></dd>
+						<dd><span>Posts: 12,369</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<p>A whole lot of things will depend on glibc updates. Just about everything compiled against the new version, in fact. Partial updates are bad, and that&#039;s probably the worst partial update possible.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="p2226758" class="blockpost roweven">
+	<h2><span><span class="conr">#12</span> <a href="viewtopic.php?pid=2226758#p2226758">Yesterday 15:01:42</a></span></h2>
+	<div class="box">
+		<div class="inbox">
+			<div class="postbody">
+				<div class="postleft">
+					<dl>
+						<dt><strong>loqs</strong></dt>
+						<dd class="usertitle"><strong>Member</strong></dd>
+						<dd><span>Registered: 2014-03-06</span></dd>
+						<dd><span>Posts: 18,277</span></dd>
+					</dl>
+				</div>
+				<div class="postright">
+					<h3>Re: [SOLVED] Systemd 257.3 upgrade freezes the system and break it</h3>
+					<div class="postmsg">
+						<div class="quotebox"><cite>brauliobo wrote:</cite><blockquote><div><p>Mistery solved. I&#039;ve put glibc in the `IgnorePkg` section of `pacman.conf`, as glibc 2.41 is breaking a cuda program compilation.</p></div></blockquote></div><p>What CUDA program is glibc 2.41 breaking.&#160; Was that not fixed by <a href="https://gitlab.archlinux.org/archlinux/packaging/packages/cuda/-/blob/7d7604d209d4491248e0da2fcf836bfa8fad53c9/fix-glibc241.patch" rel="nofollow">https://gitlab.archlinux.org/archlinux/ … c241.patch</a>?</p>
+						<p class="postedit"><em>Last edited by loqs (Yesterday 15:01:54)</em></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="inbox">
+			<div class="postfoot clearb">
+				<div class="postfootleft"><p><span>Offline</span></p></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="postlinksb">
+	<div class="inbox crumbsplus">
+		<div class="pagepost">
+			<p class="pagelink conl"><span class="pages-label">Pages: </span><strong class="item1">1</strong></p>
+		</div>
+		<ul class="crumbs">
+			<li><a href="index.php">Index</a></li>
+			<li><span>»&#160;</span><a href="viewforum.php?id=23">Newbie Corner</a></li>
+			<li><span>»&#160;</span><strong><a href="viewtopic.php?id=303424">[SOLVED] Systemd 257.3 upgrade freezes the system and break it</a></strong></li>
+		</ul>
+		<div class="clearer"></div>
+	</div>
+</div>
+</div>
+
+<div id="brdfooter" class="block">
+	<h2><span>Board footer</span></h2>
+	<div class="box">
+		<div id="brdfooternav" class="inbox">
+			<div class="conl">
+				<form id="qjump" method="get" action="viewforum.php">
+					<div><label><span>Jump to<br /></span>
+					<select name="id" onchange="window.location=('viewforum.php?id='+this.options[this.selectedIndex].value)">
+						<optgroup label="Technical Issues and Assistance">
+							<option value="23" selected="selected">Newbie Corner</option>
+							<option value="17">Installation</option>
+							<option value="22">Kernel &amp; Hardware</option>
+							<option value="18">Applications &amp; Desktop Environments</option>
+							<option value="31">Laptop Issues</option>
+							<option value="8">Networking, Server, and Protection</option>
+							<option value="32">Multimedia and Games</option>
+							<option value="51">Arch Linux Guided Installer</option>
+							<option value="50">System Administration</option>
+							<option value="35">Other Architectures</option>
+						</optgroup>
+						<optgroup label="Arch-centric">
+							<option value="24">Announcements, Package &amp; Security Advisories</option>
+							<option value="1">Arch Discussion</option>
+							<option value="13">Forum &amp; Wiki discussion</option>
+						</optgroup>
+						<optgroup label="Pacman Upgrades, Packaging &amp; AUR">
+							<option value="44">Pacman &amp; Package Upgrade Issues</option>
+							<option value="49">[testing] Repo Forum</option>
+							<option value="4">Creating &amp; Modifying Packages</option>
+							<option value="38">AUR Issues, Discussion &amp; PKGBUILD Requests</option>
+						</optgroup>
+						<optgroup label="Contributions &amp; Discussion">
+							<option value="20">GNU/Linux Discussion</option>
+							<option value="27">Community Contributions</option>
+							<option value="33">Programming &amp; Scripting</option>
+							<option value="30">Other Languages</option>
+							<option value="47">Artwork and Screenshots</option>
+						</optgroup>
+					</select></label>
+					<input type="submit" value=" Go " accesskey="g" />
+					</div>
+				</form>
+			</div>
+			<div class="conr">
+				<p id="feedlinks"><span class="atom"><a href="extern.php?action=feed&amp;tid=303424&amp;type=atom">Atom topic feed</a></span></p>
+				<p id="poweredby">Powered by <a href="http://fluxbb.org/">FluxBB</a></p>
+			</div>
+			<div class="clearer"></div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+<div class="end-box"></div>
+</div>
+
+</body>
+</html>
