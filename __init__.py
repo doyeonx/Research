@@ -1,7 +1,9 @@
+import files
 import requests
 from bs4 import BeautifulSoup
 import json
 import re
+import time
 
 ARCH_LINK = "https://bbs.archlinux.org/"
 
@@ -15,12 +17,14 @@ def get_post_url(post):
 
     pages = tclcon.find('span', class_='pagestext')
     
-    if pages:
+    if href and pages:
         a_tags = pages.find_all('a')
         page_length = len(a_tags)
         return href, page_length
-    else:
+    elif href:
         return href, None
+    else:
+        return
 
 def get_post_title(post):
     tclcon = post.find('div', class_='tclcon')
@@ -29,16 +33,6 @@ def get_post_title(post):
         if a_tag:
             title = a_tag.get_text(strip=True)
             return title
-
-
-# def get_user_data(soup):
-#     user = {
-#         'username': username,
-#         'membership': membership,
-#         'registered': registered,
-#         'posts': posts,
-#     }
-
 
 def get_post_data(post_title, post_url, page_length):
     if not page_length:
@@ -57,10 +51,18 @@ def get_post_data(post_title, post_url, page_length):
             if post and 'id' in post.attrs:
                 comment['id'] = post['id']
 
-            comment['order'] = post.find('span', class_='conr')
-            comment['time'] = post.find('a').get_text(strip=True)
-            comment['user'] = post.find('dt').find('strong').get_text(strip=True)
-            comment['content'] = post.find('div', class_='postmsg').text.strip()
+            conr_span = post.find('span', class_='conr')
+            comment['order'] = conr_span.get_text(strip=True) if conr_span else None
+
+            time_a = post.find('a')
+            comment['time'] = time_a.get_text(strip=True) if time_a else None
+
+            user_strong = post.find('dt').find('strong')
+            comment['user'] = user_strong.get_text(strip=True) if user_strong else None
+
+            postmsg_div = post.find('div', class_='postmsg')
+            comment['content'] = postmsg_div.get_text(strip=True) if postmsg_div else None
+
             comments.append(comment)
 
     post_data = {
@@ -71,10 +73,9 @@ def get_post_data(post_title, post_url, page_length):
 
     return post_data
 
-
-def get_forum_data(base_url, url):
-
+def get_forum_data(url):
     response = requests.get(url)
+
     soup = BeautifulSoup(response.content, 'html.parser')
 
     forum_posts_links = []
@@ -84,15 +85,18 @@ def get_forum_data(base_url, url):
     all_posts_list = odd_posts_list + even_posts_list
 
     for post in all_posts_list:
-        # break if there aren't any replies
-        reply_num = post.find('td', class_='tc2')
+        if 'sticky' in post.get('class', []):
+            continue
 
-        if reply_num == 0:
-            break
-        else:
-            post_url, page_length = get_post_url(post)
-            post_title = get_post_title(post)
-            forum_posts_links.append({'url': post_url, 'title': post_title, 'pages': page_length})
+        reply_num_td = post.find('td', class_='tc2')
+        if reply_num_td:
+            reply_num = reply_num_td.get_text(strip=True)
+            if reply_num == 0:
+                continue
+        
+        post_url, page_length = get_post_url(post)
+        post_title = get_post_title(post)
+        forum_posts_links.append({'url': post_url, 'title': post_title, 'pages': page_length})
 
     forum_data = []
 
@@ -102,17 +106,25 @@ def get_forum_data(base_url, url):
 
     return forum_data
 
-
 def main():
-    final_page = 1
+    json_files = files.JSON_FILES
+    
+    for i in range(len(json_files)):
+        file_name = json_files[i]['file_name']
+        start_page = json_files[i]['start_page']
+        final_page = json_files[i]['final_page']
 
-    all_forum_data = []
+        print(f"file: {final_page}")
 
-    for i in range(1, final_page + 1):
-        url = "https://bbs.archlinux.org/viewforum.php?id=23&p=" + str(i)
-        forum_data = get_forum_data(ARCH_LINK, url)
-        all_forum_data.append(forum_data)
+        all_forum_data = []
 
-    print(all_forum_data)
+        for i in range(start_page, final_page):
+            print(i)
+            url = "https://bbs.archlinux.org/viewforum.php?id=23&p=" + str(i)
+            forum_data = get_forum_data(url)
+            all_forum_data.append(forum_data)
+
+            with open(file_name, 'w') as json_file:
+                json.dump(all_forum_data, json_file, indent=4)
 
 main()
