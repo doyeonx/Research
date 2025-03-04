@@ -1,3 +1,5 @@
+import sys
+sys.path.insert(1, '../')
 import files
 import requests
 from bs4 import BeautifulSoup
@@ -114,7 +116,7 @@ def main():
         start_page = json_files[i]['start_page']
         final_page = json_files[i]['final_page']
 
-        print(f"file: {final_page}")
+        print(f"file: {file_name}")
 
         all_forum_data = []
 
@@ -122,9 +124,9 @@ def main():
             print(i)
             url = "https://bbs.archlinux.org/viewforum.php?id=23&p=" + str(i)
             forum_data = get_forum_data(url)
-            all_forum_data.append(forum_data)
+            all_forum_data.extend(forum_data)
 
-            with open(file_name, 'w') as json_file:
+            with open("temp.json", 'w') as json_file:
                 json.dump(all_forum_data, json_file, indent=4)
 
 main()
