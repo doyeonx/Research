@@ -5,6 +5,7 @@ import json
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
 from torch.utils.data import DataLoader, SequentialSampler, TensorDataset
+import numpy as np
 
 TOXICITY_DESCRIPTION = {
     "Insulting": "Using derogatory language to demean others.",
@@ -24,6 +25,10 @@ def tokenize_comments(comments):
     )
     return inputs
 
+def classify_comment(post):
+    vectorizer = TfidfVectorizer()
+    X = vectorizer.fit_transform([post])
+
 def main():
     json_files = files.JSON_FILES
     
@@ -33,10 +38,10 @@ def main():
     #     with open(file_name, 'r') as f:
     #         file = json.load(f)
     
-    file_name = '../data/test_data.json'
+    input_file_name = '../data/test_data.json'
 
-    with open(file_name, 'r') as f:
-        file = json.load(f)
+    with open(input_file_name, 'r') as f:
+        input_file = json.load(f)
 
     model_name = "unitary/toxic-bert"
     tokenizer = BertTokenizer.from_pretrained(model_name)
